@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../SignUp/signup.css";
 import { useState } from "react";
 import axios from "axios";
+import api from "../../Webapi/api";
 import { useDispatch } from "react-redux";
 import { setToken, setUser } from "../../../redux-conflig/userSlice";
 import { ToastContainer, toast } from "react-toastify";
@@ -16,7 +17,7 @@ function SignIn() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            let response = await axios.post("http://localhost:3000/user/signIn", { usernameOrEmail:email, password });
+            let response = await axios.post(api.signin, { usernameOrEmail:email, password });
             localStorage.setItem("user",JSON.stringify(response.data.user));
             dispatch(setUser(response.data.user));
             dispatch(setToken(response.data.token));
