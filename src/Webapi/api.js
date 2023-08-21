@@ -2,12 +2,12 @@ export default{
     URL : "https://blog-itj5.onrender.com",
     file:"https://blog-itj5.onrender.com/uploads/",
     profilepic:"https://blog-itj5.onrender.com/profilephoto/",
-    addpost:"/post/uploadPost",
-    getcomment:"/post/getComment",
-    postcomment:"/post/comment",
-    getpost:"/post/getAllPost",
-    doLike:"/post/like",
-    delete:"user//deletepost/:userid/:postid",
+    addpost:URL+"/post/uploadPost",
+    getcomment:URL+"/post/getComment",
+    postcomment:URL+"/post/comment",
+    getpost:URL+"/post/getAllPost",
+    doLike:URL+"/post/like",
+    delete:URL+"user//deletepost/:userid/:postid",
    
 }
 
