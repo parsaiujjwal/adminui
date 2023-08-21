@@ -3,6 +3,8 @@ export default{
     file:"https://blog-itj5.onrender.com/uploads/",
     profilepic:"https://blog-itj5.onrender.com/profilephoto/",
     addpost:URL+"/post/uploadPost",
+    signin:URL+"/user/signIn",
+    // signin:URL+"/user/signIn",
     getcomment:URL+"/post/getComment",
     postcomment:URL+"/post/comment",
     getpost:URL+"/post/getAllPost",
