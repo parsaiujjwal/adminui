@@ -1,6 +1,6 @@
 {
-  "name": "mywings-ui",
-  "proxy": "http://localhost:3000",
+  "name": "my_blog",
+  "proxy": "https://blog-itj5.onrender.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
