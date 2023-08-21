@@ -33,7 +33,7 @@ export function Home() {
     // do like
     const doLike = async (postId) => {
         const divElement = document.getElementById("div" + postId);
-        let response = await axios.post(api.URL + api.doLike, { postId, friendUserId: user._id });
+        let response = await axios.post(  api.doLike, { postId, friendUserId: user._id });
         if (response.data.status) {
             let postIndex = await postList.findIndex((posts) => posts._id == postId);
             const iconElement = divElement.querySelector('i');
@@ -66,7 +66,7 @@ export function Home() {
         if (comment.style.display == "none") {
             comment.style.display = "block";
             try {
-                let response = await axios.post(api.URL + "/post/getComment", { userPostId: postId });
+                let response = await axios.post(  "/post/getComment", { userPostId: postId });
                 setPostComment(response.data.result);
             } catch (err) {
                 console.log(err);
@@ -90,7 +90,7 @@ export function Home() {
         else {
             try {
                 setcomment("")
-                let response = await axios.post(api.URL + api.postcomment, { friendUserId: user._id, postId, comment: comment });
+                let response = await axios.post(  api.postcomment, { friendUserId: user._id, postId, comment: comment });
                 if (response)
                     toast.success("comment posted")
 
@@ -106,7 +106,7 @@ export function Home() {
     const savePosts = async (postId) => {
         const divElement = document.getElementById("save" + postId);
         const iconElement = divElement.querySelector('i');
-        await axios.post(api.URL + api.savePost, { userId: user._id, postId });
+        await axios.post(  api.savePost, { userId: user._id, postId });
         if (iconElement && iconElement.classList.contains('bi-bookmark')) {
             dispach(savePost({ postId }));
         } else if (iconElement && iconElement.classList.contains('bi-bookmark-fill')) {
