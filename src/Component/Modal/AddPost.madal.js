@@ -47,7 +47,7 @@ export function AddPostModal() {
 
     const submitbutton = async (event) => {
         event.preventDefault();
-        let url = api.uploadPost;
+        let url = api.addpost;
         const formdata = new FormData();
         formdata.append('file', file);
         formdata.append('date', date);
