@@ -2,7 +2,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./signup.css";
 import { useState } from "react";
 import axios from "axios";
-import api from "../../Webapi/api";
+import api from "../../../Webapi/api";
 import { useDispatch } from "react-redux";
 import { setToken, setUser } from "../../../redux-conflig/userSlice";
 import { ToastContainer, toast } from "react-toastify";
