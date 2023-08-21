@@ -4,7 +4,7 @@ export default{
     profilepic:"https://blog-itj5.onrender.com/profilephoto/",
     addpost:URL+"/post/uploadPost",
     signin:URL+"/user/signIn",
-    // signin:URL+"/user/signIn",
+    signup:URL+"/user/signUp",
     getcomment:URL+"/post/getComment",
     postcomment:URL+"/post/comment",
     getpost:URL+"/post/getAllPost",
