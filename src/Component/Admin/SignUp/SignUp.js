@@ -2,6 +2,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import "./signup.css";
 import { useState } from "react";
 import axios from "axios";
+import api from "../../Webapi/api";
 import { useDispatch } from "react-redux";
 import { setToken, setUser } from "../../../redux-conflig/userSlice";
 import { ToastContainer, toast } from "react-toastify";
@@ -16,7 +17,7 @@ export default function SignUp() {
     const eventHandler = async (event)=>{
         try{
             event.preventDefault();
-            let response = await axios.post("http://localhost:3000/user/signUp",{name,userName,email,password,contact});
+            let response = await axios.post(api.signup,{name,userName,email,password,contact});
             localStorage.setItem("user",JSON.stringify(response.data.user));
             dispatch(setUser(response.data.user));
             dispatch(setToken(response.data.token));
